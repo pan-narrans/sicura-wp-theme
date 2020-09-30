@@ -1,0 +1,244 @@
+/************** FONTS *****************/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+/************** GENERAL *****************/
+
+body{ font: 16px/1.6 'Raleway', sans-serif; height: 100%; background: #E5E5E5; color: #000;}
+body pre{ font: 16px/1.6 'Roboto', sans-serif; letter-spacing: 0.025em;}
+h1{ font-size: 28px; margin: 15px 0 15px; }
+h2{ font-size: 24px; margin-top: 0; }
+h3{ font-size: 20px; margin-top: 0; }
+h4{ font-size: 18px; margin-top: 0; }
+a{color: #92DEFF }
+
+/* COLOR CORPORATIVO */
+:root{ --color-corporativo: #FF780A; }  /*old yellow #FFD237*/
+
+
+body{ display: flex; flex-direction: column; min-height: 100vh;}
+#content{ flex-grow: 2 }
+
+html{ min-height: 100%; 
+    /*Elimina la scrollbar en Firefox*/
+   scrollbar-width: none;
+}
+
+/*Elimina la scrollbar en Chrome*/
+::-webkit-scrollbar {
+   width: 0px;  /* remove scrollbar space */
+   background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/************** HOME PAGE *****************/
+
+/* Noticias Temporales */
+.temp{
+    font-size: 48px; color: #252525 ; font-weight: bold; margin-top: 0px;
+    text-align: center !important; margin-top:75px;
+}
+.temp-border{ border: 4px solid var(--color-corporativo); padding: 10px 0px; border-radius: 5px;}
+
+/* Control */
+.center{ float: none; margin-left: auto; margin-right: auto; }
+.v-center{ margin-top: auto; margin-bottom: auto; }
+.disp-contents{ display: contents; }
+.black{ color: black !important }
+.justify{ text-align: justify; }
+.yellow{ color: var(--color-corporativo); }
+
+/* HEADER */
+#header{ width: 100%; position: relative; z-index: 10;}
+#header p{ margin:0px; }
+
+/* Header - Logo */
+.align{ align-items: center; }
+
+/* Header - Main Menu */
+.menu-area{width: 100%; padding: 15px 0px; background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+.main-menu{  justify-content: flex-end; }
+.main-menu ul{ list-style: none; padding: 0; margin: 0;}
+.main-menu ul li{ display: initial;  margin-right: 25px; margin-top: auto; margin-bottom: auto;}
+.main-menu ul a{ text-transform: uppercase; color: #000; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.1em;  padding: 4px 0;}
+.main-menu ul a:hover{ color: #0056b3; }
+nav{ color: black; }
+
+/* Dropdown menu */
+.dropdown-menu{ 
+    position: absolute;  left: calc(-50vw + 50%) !important; width: 100vw; transform: none !important; 
+    background: #F7F7F7; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25); border: none !important;
+}
+.dropdown-menu div{padding: 10px 100px 10px 0; display: flex; flex-direction: column; flex-wrap: wrap; max-height: 150px; align-content: flex-start;}
+.dropdown-menu li a{ padding: 6px 20px; }
+.dropdown-menu li{ margin: 0 10px; }
+
+
+/* CONTENT */
+#content{ height: 100%; background: #FFFFFF; padding: 0px 20px 50px; position: relative; z-index: 0;}
+.content { display:block; }
+.content a::before{ content: '\00bb \00a0'; }
+.wp-block-column{ margin: 0 32px 20px 32px; }
+
+.low-brightness{filter: brightness(0.85);}
+
+/* Page - Header */
+.search-form{ justify-content: end; }
+.search input[type="search"]{ border-radius: 25px; box-shadow: none; border: solid 1px #ccc; padding: 5px 10px 5px 15px; margin: 7px 0; width: 80%; }
+.search-form label{ margin:0; width: 100%; }
+
+.title-image{object-fit: cover; position: relative; z-index: 0; width: 100%;}
+.title{ margin-bottom: 40px; font-style: normal; font-size: 48px; font-weight: 700;}
+.title div{ position: absolute; top: 50px; z-index: 10; background: #FFFFFF; padding: 5px 40px; }
+.title h1{ font-style: normal; font-size: 48px; font-weight: 700; position: relative; top: 10px;}
+
+/* Sidebar */
+.sidebar .widget-wrapper{ background: #616161; padding: 15px; margin-bottom: 40px;}
+.sidebar h2{ color: #fff; margin-bottom: 20px; margin-left: 5px;}
+.sidebar p{ color: #fff; margin: 5px; font-size: 13px; font:'Roboto', sans-serif; letter-spacing: 0.025em; }
+.sidebar a{color: #92DEFF }
+.sidebar ul{ padding: 0px; margin: 10px; }
+
+/* Middle Area - Sidebar - Contact Form 7 */
+.widget-wrapper, .wpcf7 label{ width: 100%; }
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea{ width: 100%; border: 0; padding: 5px 10px; color: #989898; }
+.wpcf7 textarea{ height: 150px; }
+.wpcf7 input[type="submit"]{ background: var(--color-corporativo); border: 0; color: #ffffff; text-transform: uppercase; width: 50%; padding: 15px; }
+.wpcf7-validation-errors{ color: #ffffff; }
+
+/* Content */
+strong{ color: #313131 ;}
+.page-content{ margin-bottom: 50px; }
+.content a{ color: #39C4FF; font-size: 16px; display: block}
+.content p{ text-align: justify; }
+
+/* Service Widget */
+.services{ background-color: #616161; color: #fff; padding: 25px; border: solid white 5px; max-width: 300px;}
+.services h2{ font-weight: 600; font-size: 18px; margin-bottom: 5px}
+.services p, .services a{ font-size: 13px; color:#fff; margin-bottom: 8px}
+.services a:hover{ color:#92DEFF}
+.services img{ object-fit: cover; height:150px !important; width: 100%; padding: 0px 0px 20px;}
+.service-link{ border: solid var(--color-corporativo) 3px; border-radius: 30px; padding: 6px 10px;}
+.widget-title ~ .textwidget{ min-height: 50px; }
+
+/* Home */
+.home-page{ margin: 0 20px; }
+.home-page section{ padding: 75px 0 0; }
+.home-presentation h2{ font-weight: bold;  font-size: 20px; }
+.home-presentation a{ /*background-color: var(--color-corporativo); border-radius: 30px; padding: 10px 15px;*/ font-size: 18px; font-weight: 600; color:#000; }
+.logo-home{ margin-top: 25px; }
+
+.home-page .services{ padding: 25px 0;}
+.home-page .services img{ height:200px !important; width: 100%; max-width: 300px !important;}
+.home-services{ background-color: #616161; }
+.home-services .services{ border: none; }
+
+
+.latest-news{ font-size: 48px; color: var(--color-corporativo); font-weight: bold; margin-top: 0px;}
+article a h2{ color: #000; font-size: 30px; font-weight: bold;}
+article a h3{ color: #000; font-size: 24px; font-weight: bold;}
+.home-page .meta-info{ margin: 10px 0; }
+.date{ font-weight: 400; font-size: 14px; color: #8D8D8D; }
+
+div.sello-excelencia{ display: flex; flex-direction: column;}
+p.sello-excelencia{ text-align: center; }
+
+
+
+/* NUESTRO EQUIPO*/
+.nuestro-equipo-h2{ margin: 10px 50px; font-weight: 700; }
+.nuestro-equipo-p{ margin: 10px 00px 70px 60px; padding-bottom:5px; max-width: 700px; border-top: solid var(--color-corporativo) 5px; }
+
+
+
+/* INSTITUTE */
+
+/* Home Instituto */
+h2 a{ color: black !important; }
+
+/* Asignaturas */
+.pdf-link a{ color: black; }
+.wp-block-file__button{ color: #000; background-color: var(--color-corporativo) !important;  font-weight: bold; }
+
+/* CONTACT */
+.contact .container:first-child{ padding: 50px 0; }
+.contact-info{ margin-top: 30px; }
+.fas{ color: #989898; }
+.map{ width: 100%;  }
+
+.customize-control-textarea textarea{ height: 50px; }
+
+
+/* NEWS */
+.news-list:first-of-type{ padding-top: 50px; }
+.news-list .title-image{ width: 100%; }
+.news-list a{ color: #000; }
+.news-list .title { position: absolute; top: 130px; z-index: 10; background: #FFFFFF; padding: 5px 40px; width: 100%; }
+.news-list .title h2 { margin: 0; font-weight: 600; }
+
+.news-image{ max-height: 150px; width: 100%; object-fit: cover;}
+
+.meta-info{ margin: 20px 0;}
+.meta-info a{ color: #000; }
+.meta-info p{ margin-bottom: 0px; }
+
+/* FOOTER */
+#footer{background: #313131; padding: 15px 0; color: #ffffff;}
+
+/* Footer - Footer Menu */
+.footer-menu ul{ list-style: none; padding: 0; margin: 0; font-size: 18px; }
+.footer-menu ul li{ display: inline;  margin: 0 15px 0 0;}
+.footer-menu ul li:last-child{ margin: 0; }
+.footer-menu ul li a{ color: #ffffff;  text-decoration: none;}
+
+.rrss-img{ width:25px; height:25px;}
+
+/* Media Queries */
+
+/* Extra Large */
+@media (max-width: 1200px){
+    /*.main-menu ul{ font-size: 14px; }*/
+    .main-menu ul li{ margin-right: 13px;}
+    .main-menu ul a{ font-size: 12px; }
+    .dropdown-menu div{ max-height: 150px; }
+}
+
+/* Large */
+@media (max-width: 992px){
+    .main-menu ul li{ margin-right: 12px;}
+    .news-image{ max-height: 200px; }
+    .title h1{ font-size: 40px; }
+    .contact-info{ margin-top: 20px; }
+    .rrss-img{ margin-top:16px; }
+    .footer-menu ul{ font-size: 14px; }
+}
+
+/* Medium */
+@media (max-width: 768px){
+    .temp{ font-size:32px}
+    .temp-border{ padding: 10px 10px;}
+    .main-menu ul a{ font-size: 14px; }
+    #menu-my_main_menu{  display: flex; flex-direction: column;}
+    .dropdown-menu div{ max-height: 300px; padding: 10px;}
+
+    .news-title{ font-size: 24px; }
+    .rrss-img{ margin-top:16px; }
+    
+    .nuestro-equipo-h2{ margin: 10px 00px; font-weight: 700; }
+    .nuestro-equipo-p{ margin: 10px 00px 70px 10px; padding-bottom:5px; max-width: 700px; border-bottom: solid var(--color-corporativo) 5px; }
+}
+
+/* Small */
+@media (max-width: 576px){
+    .footer-menu ul{ font-size: 14px; }
+    .title h1{ font-size: 40px; }
+    .title div{ padding: 5px 30px; }
+    .title-image{ max-height: 300px; }
+
+}
+
+/* Extra Small */
+@media (max-width: 420px){
+    .title h1{ font-size: 38px; }
+    .title div{ padding: 5px 20px; }
+}

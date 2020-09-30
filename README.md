@@ -1,0 +1,1 @@
+# sicura-wp-theme
